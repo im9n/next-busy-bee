@@ -50,7 +50,6 @@ export default function BumbleInput({ replyTo }) {
     const postRef = doc(db, "posts", comment.uid);
     const postSnap = await getDoc(postRef);
     const postComments = await postSnap.data().comments;
-    const uniqueId = Math.floor(Math.random() * Date.now()).toString(16);
 
     await updateDoc(postRef, {
       comments: [
@@ -60,16 +59,13 @@ export default function BumbleInput({ replyTo }) {
           username: user.username,
           text: text,
           likes: [],
-          id: uniqueId,
         },
       ],
     });
 
-    setSnackbarOpen(true);
-
     dispatch(closeComment());
 
-    router.replace('/' + comment.uid)
+    setSnackbarOpen(true);
   }
 
   function handleSnackbarClose(event, reason) {

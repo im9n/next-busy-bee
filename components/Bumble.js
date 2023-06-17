@@ -12,7 +12,7 @@ import {
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/solid";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Router, useRouter } from "next/navigation";
 import Moment from "react-moment";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -56,16 +56,21 @@ export default function Bumble({ data, id }) {
     }
   }
 
+  function handleRoute() {
+    router.push("/" + id);
+    router.refresh();
+  }
+
   return (
     <div className="border-b border-gray-100">
-      <Link href={`/${id}`}>
+      <div className="cursor-pointer" onClick={() => handleRoute()}>
         <BumbleHeader
           username={data?.username}
           name={data?.name}
           timestamp={data?.timestamp?.toDate()}
           text={data?.text}
         />
-      </Link>
+      </div>
       <div className="flex space-x-14 p-3 ms-16">
         <div className="relative">
           <ChatIcon

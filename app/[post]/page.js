@@ -61,11 +61,11 @@ export default async function Post({ params }) {
           </div>
           <span className="ms-0 text-[15px] mb-1.5">{postData?.text}</span>
         </div>
-        {/* <div className="border-b border-gray-100 p-3 text-[15px]">
+        <div className="border-b border-gray-100 p-3 text-[15px]">
           <span>
             <span className="font-bold">{postData?.likes.length}</span> Likes
           </span>
-        </div> */}
+        </div>
         <div className="border-b border-gray-100 p-3 py-3 text-[15px] flex justify-evenly">
           <ChatIcon className="h-[22px] w-[22px] text-[#707E89] cursor-not-allowed" />
           <HeartIcon className="h-[24px] w-[24px] text-[#707E89] cursor-not-allowed" />
