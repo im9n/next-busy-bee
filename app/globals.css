@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.sidebar-hover {
+  @apply cursor-pointer hover:bg-white hover:bg-opacity-10 rounded-3xl xl:p-3 xl:w-auto xl:h-auto w-11 h-11
+  xl:justify-start;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bumble-button{
+  @apply hover:cursor-pointer hover:shadow-lg
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.MuiLinearProgress-bar{
+  @apply bg-black
 }
