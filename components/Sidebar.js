@@ -31,7 +31,7 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="sticky top-0 hidden sm:flex flex-col h-screen xl:ml-20 xl:mr-10 p-3">
+    <div className="sticky top-0 hidden sm:flex flex-col h-screen xl:ml-20 xl:mr-10 p-3 relative z-40">
       <nav className="relative h-full xl:space-y-1.5 flex flex-col items-center xl:block">
         <div className="xl:p-3 p-1 mb-3 xl:mb-0 flex justify-center items-center xl:justify-start">
           <Image
@@ -58,7 +58,7 @@ export default function Sidebar() {
           <>
             <div
               className="dropdown dropdown-right absolute bottom-3 p-3 flex items-center justify-between w-full rounded-full hover:bg-gray-500
-         hover:bg-opacity-10 transiton duration-150 ease-in cursor-pointer w-[240px]"
+            hover:bg-opacity-10 transiton duration-150 ease-in cursor-pointer w-[240px] "
             >
               <div className="flex w-[36px] h-[36px] xl:w-full items-center" tabIndex={0}>
                 <Image

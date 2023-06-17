@@ -44,6 +44,10 @@ export default function BumbleInput({ replyTo }) {
     });
 
     setSnackbarOpen(true);
+
+    setTimeout(() => {
+      setSnackbarOpen(false);
+    }, 3000);
   }
 
   async function commentBumble() {
@@ -66,6 +70,10 @@ export default function BumbleInput({ replyTo }) {
     dispatch(closeComment());
 
     setSnackbarOpen(true);
+
+    setTimeout(() => {
+      setSnackbarOpen(false);
+    }, 3000);
   }
 
   function handleSnackbarClose(event, reason) {
